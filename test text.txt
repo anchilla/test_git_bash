@@ -1,1 +1,40 @@
-test
+
+Pokusala da uradim push posle povezivanja:
+Korisnik@DESKTOP-JIJG0RV MINGW64 ~/Documents/test_git_bash (master)
+$ git push -u -f origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/anchilla/test_git_bash.gi
+t'
+-ovo bilo zato sto nemam main u projektu, nego je master, a na githubu je main, mora da se puish master.
+
+Kad sam stavila za master, pojavilo se ovo i trazi da se prijavim na github, pojavi se prozorce:
+Korisnik@DESKTOP-JIJG0RV MINGW64 ~/Documents/test_git_bash (master)
+$ git push -u -f origin master
+fatal: User cancelled dialog.
+error: unable to read askpass response from 'C:/Program Files/Git/mingw64/bin/gi
+t-askpass.exe'
+Username for 'https://github.com':
+
+
+Ovo se desilo kada sam pokusala da ponovim komandu u novoj sesiji:
+Korisnik@DESKTOP-JIJG0RV MINGW64 ~/Documents/test_git_bash (master)
+$ git remote add origin https://github.com/anchilla/test_git_bash.git
+error: remote origin already exists.
+
+Ovo je kada sam se prijavila na github preko prozorceta, jej uspelo!!!
+Korisnik@DESKTOP-JIJG0RV MINGW64 ~/Documents/test_git_bash (master)
+$ git push -u -f origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 247 bytes | 247.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/anchilla/test_git_bash/pull/new/master
+remote:
+To https://github.com/anchilla/test_git_bash.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Korisnik@DESKTOP-JIJG0RV MINGW64 ~/Documents/test_git_bash (master)
